@@ -4,67 +4,150 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  body {
-    font-family: "Times New Roman", Times, serif;
-  }
-  .profile-details {
+body {
+    font-family: "Times", serif;
+}
+.container {
+    display: flex;
+}
+.sidebar {
+    width: 15%;
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.sidebar a {
+    display: block;
+    margin-bottom: 10px;
+}
+.grades {
     width: 50%;
-    margin: auto;
-  }
-  .profile-details th, .profile-details td {
+    padding: 20px;
+    box-sizing: border-box;
+}
+.grades table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.grades table, .grades th, .grades td {
+    border: 1px solid #ccc;
+}
+.grades th, .grades td {
     padding: 10px;
     text-align: left;
-  }
-  .navigation {
-    list-style-type: none;
-  }
-  .navigation li {
-    margin-bottom: 5px;
-  }
+}
+.grades input[type="text"] {
+    width: 100%;
+}
+.grades select {
+    width: 100%;
+}
+.extra-info {
+    width: 20%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.sidebar th, .sidebar .header {
+        font-weight: bold;
+        font-size: larger;
+    }
 
-  th, td {
-    border-right: 1px solid #000; /* This adds a border to the right side of each cell */
-  }
-  th:last-child, td:last-child {
-    border-right: none; /* This removes the border for the last cell in each row */
-  }
+    .sidebar tr {
+        margin-bottom: 20px;
+    }
+
+    .sidebar td, .sidebar th {
+        padding: 10px 0;
+    }
+
+    .sidebar th, .sidebar .header {
+        font-weight: bold;
+        font-size: larger;
+    }
+
+    .sidebar tr {
+        margin-bottom: 20px; /* Adjust this value to increase or decrease the space between rows */
+    }
+
+    .sidebar td, .sidebar th {
+        padding: 10px 0; /* Adjust this value to increase or decrease the space between lines within a row */
+    }
+
+
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-<ul class="navigation">
-  <li><a href="#">Account</a></li>
-  <li><a href="profile.html">Profile</a></li>
-  <li><a href="#">Courses</a></li>
-  <li><a href="#">Home</a></li>
-  <li><a href="#">Assignments</a></li>
-  <li><a href="#">Grades</a></li>
-  <!-- Add other navigation links as needed -->
-</ul>
+<div class="container">
+    <!-- Kanbas Navigation Sidebar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="account.html" target="_blank">Account</a></li>
+            <li><a href="#" target="_blank">Dashboard</a></li>
+            <li><a href="#" target="_blank">Courses</a></li>
+            <li><a href="" target="_blank">Calendar</a></li>
+            <li><a href="#" target="_blank">Inbox</a></li>
+            <li><a href="#" target="_blank">History</a></li>
+            <li><a href="#" target="_blank">Studio</a></li>
+            <li><a href="#" target="_blank">Commons</a></li>
+            <li><a href="#" target="_blank">Help</a></li>           
+        </ul>
+    </div>
 
-<table class="profile-details">
-  <tr>
-    <th>Name</th>
-    <td>Xinyan Liu</td>
-  </tr>
-  <tr>
-    <th>Contact</th>
-    <td>liu.xinyan1@northeastern.edu</td>
-  </tr>
-  <tr>
-    <th>Biography</th>
-    <td>Your biography here...</td>
-  </tr>
-  <tr>
-    <th>Links</th>
-    <td>
-      <a href="#">Your link 1 here</a><br>
-      <a href="#">Your link 2 here</a><br>
-      <!-- Add other links as needed -->
-    </td>
-  </tr>
-</table>
-<button onclick="location.href='edit.html'">Edit Profile</button>
+    <!-- Course Navigation Sidebar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="#" target="_blank">Notifications</a></li>
+            <li><a href="profile.html" target="_blank">Profiles</a></li>
+            <li><a href="#" target="_blank">Files</a></li>
+            <li><a href="#" target="_blank">Settings</a></li> 
+            <li><a href="#" target="_blank">ePortfolios</a></li>
+            <li><a href="#" target="_blank">Shared Content</a></li>
+            <li><a href="#" target="_blank">The Hub</a></li>
+            <li><a href="#" target="_blank">Quickly Course Tools</a></li>
+            <li><a href="#" target="_blank">Global Announcements</a></li>
+            
+        </ul>
+    </div>
+
+    
+    <div class="sidebar">
+        <table>
+            <tr>
+                <td class="header"><strong>Xinyan Liu</strong></td>
+            </tr>
+            <tr>
+                <th>Contact</th>
+            </tr>
+            <tr>
+                <td>liu.xinyan1@northeastern.edu</td>
+            </tr>
+            <tr>
+                <th>Biography</th>
+            </tr>
+            <tr>
+                <td>Your biography here...</td>
+            </tr>
+            <tr>
+                <th>Links</th>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#" target="_blank">YouTube</a>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+      <div class="sidebar">
+        <button onclick="location.href='editprofile.html'">Edit Profile</button>
+      </div>
+      
+
+    
+</div>
 
 </body>
 </html>

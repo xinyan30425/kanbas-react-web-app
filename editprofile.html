@@ -4,103 +4,235 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  body {
-    font-family: "Times New Roman", Times, serif;
-  }
-  .profile-details {
+body {
+    font-family: "Times", serif;
+}
+.container {
+    display: flex;
+}
+.sidebar {
+    width: 15%;
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.sidebar a {
+    display: block;
+    margin-bottom: 10px;
+}
+.grades {
     width: 50%;
-    margin: auto;
-  }
-  .profile-details th, .profile-details td {
+    padding: 20px;
+    box-sizing: border-box;
+}
+.grades table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.grades table, .grades th, .grades td {
+    border: 1px solid #ccc;
+}
+.grades th, .grades td {
     padding: 10px;
     text-align: left;
-  }
-  .navigation {
-    list-style-type: none;
-  }
-  .navigation li {
-    margin-bottom: 5px;
-  }
+}
+.grades input[type="text"] {
+    width: 100%;
+}
+.grades select {
+    width: 100%;
+}
+.extra-info {
+    width: 20%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.sidebar th, .sidebar .header {
+        font-weight: bold;
+        font-size: larger;
+    }
+
+    .sidebar tr {
+        margin-bottom: 20px;
+    }
+
+    .sidebar td, .sidebar th {
+        padding: 10px 0;
+    }
+
+    .sidebar th, .sidebar .header {
+        font-weight: bold;
+        font-size: larger;
+    }
+
+    .sidebar tr {
+        margin-bottom: 20px; /* Adjust this value to increase or decrease the space between rows */
+    }
+
+    .sidebar td, .sidebar th {
+        padding: 10px 0; /* Adjust this value to increase or decrease the space between lines within a row */
+    }
+
+
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
+<div class="container">
+    <!-- Kanbas Navigation Sidebar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="account.html" target="_blank">Account</a></li>
+            <li><a href="#" target="_blank">Dashboard</a></li>
+            <li><a href="#" target="_blank">Courses</a></li>
+            <li><a href="#" target="_blank">Calendar</a></li>
+            <li><a href="#" target="_blank">Inbox</a></li>
+            <li><a href="#" target="_blank">History</a></li>
+            <li><a href="#" target="_blank">Studio</a></li>
+            <li><a href="#" target="_blank">Commons</a></li>
+            <li><a href="#" target="_blank">Help</a></li>           
+        </ul>
+    </div>
 
-    <form class="edit-details" action="index.html" method="get">
-        <div>
-            <br>
-            <strong>Xinyan Liu</strong>
-        </div>
-
-        <label>
-          Xinyan 
-          <input type="text" name="first-name" value="Your First Name">
-        </label>
-
-        <label>
-          Liu
-          <input type="text" name="last-name" value="Your Last Name">
-        </label>
-
-        <label>
-            pronouns:
-            <select name="pronouns">
-                <option value="he/him">He/Him</option>
-                <option value="she/her">She/Her</option>
-                <option value="they/them">They/Them</option>
-                <option value="other">Other</option>
-            </select>
-        </label>
-
-        <label>
-            Title:
-            <input type="text" name="last-name" value="Your Last Name">
-        </label>
-
-        <div>
-            <br>
-            <strong>Contact</strong>
-        </div>
-
-        <label>
-          Email
-          <input type="email" name="email" value="Your Email">
-        </label>
-        <div>
-            <br>
-            <strong>Biography</strong>
+    <!-- Course Navigation Sidebar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="#" target="_blank">Notifications</a></li>
+            <li><a href="profile.html" target="_blank">Profiles</a></li>
+            <li><a href="#" target="_blank">Files</a></li>
+            <li><a href="settings.html" target="_blank">Settings</a></li> 
+            <li><a href="#" target="_blank">ePortfolios</a></li>
+            <li><a href="#" target="_blank">Shared Content</a></li>
+            <li><a href="#" target="_blank">The Hub</a></li>
+            <li><a href="#" target="_blank">Quickly Course Tools</a></li>
+            <li><a href="#" target="_blank">Global Announcements</a></li>
             
-        </div>
-        <label>
-          Biography
-          CS Graduate Student,Software Engineering, Machine Learning,AI, Sustainability
-          <textarea name="biography">Your biography here...</textarea>
-        </label>
-        <div>
-            <br>
-            <strong>Links</strong>
-        </div>
+        </ul>
+    </div>
 
-        <label>
-          Link 1
-          <input type="url" name="link1" value="Your link 1 here">
-        </label>
-        <label>
-          Link 2
-          <input type="url" name="link2" value="Your link 2 here">
-        </label>
-
-        <div>
-            <br>
-                <button type="submit">Save Profile</button>
-                <button type="button" onclick="location.href='index.html'">Cancel Editing</button>
-                <button onclick="location.href='editprofile.html'">Edit Profile</button>
-        </div>
-
-        
-
-
-      </form>
     
+    <div class="sidebar">
+        <form class="edit-details" action="index.html" method="get">
+            <div>
+                <br>
+                <strong>Xinyan Liu</strong>
+            </div>
+    
+            <div>
+            <label>
+              First Name 
+              <input type="text" name="first-name" value="Your First Name">
+            </label>
+            </div>
+    
+            <div>
+            <label>
+              Last Name
+              <input type="text" name="last-name" value="Your Last Name">
+            </label>
+            </div>
+    
+            <div>
+            <label>
+                Pronouns:
+                <select name="pronouns">
+                    <option value="he/him">He/Him</option>
+                    <option value="she/her">She/Her</option>
+                    <option value="they/them">They/Them</option>
+                    <option value="other">Other</option>
+                </select>
+            </label>
+          </div>
+    
+          <div>
+            <label>
+                Title:
+                <input type="text" name="last-name" value="Your Last Name">
+            </label>
+          </div>
+    
+            <div>
+                <br>
+                <strong>Contact</strong>
+            </div>
+            
+            <div>
+            <label>
+              Email
+              <input type="email" name="email" value="Your Email">
+            </label>
+            </div>
+    
+    
+            <div>
+                <br>
+                <strong>Biography</strong> 
+            </div>
+    
+            <label>
+              Biography
+              CS Graduate Student,Software Engineering, Machine Learning,AI, Sustainability
+              <textarea name="biography">Your biography here...</textarea>
+            </label>
+    
+            <div>
+                <br>
+                <strong>Links</strong>
+            </div>
+    
+            <div>
+            <label>
+              Link 1
+              <input type="url" name="link1" value="Your link 1 here">
+            </label>
+    
+            <label>
+              Link 2
+              <input type="url" name="link2" value="Your link 2 here">
+            </label>
+          </div>
+    
+    
+            <div>
+                <br>
+                    <button type="submit">Save Profile</button>
+                    <button type="button" onclick="location.href='index.html'">Cancel Editing</button>
+                    <button onclick="location.href='editprofile.html'">Edit Profile</button>
+                    <button type="add another link">Add another link</button>
+            </div>
+    
+            <div>
+    
+        <div class="link-container">
+            <label>
+                Title
+                <input type="text" name="link1Title" placeholder="Title for link 1">
+            </label>
+            <label>
+                Link 1
+                <input type="url" name="link1" placeholder="Your link 1 here">
+            </label>
+            <span>(<a href="https://youtube.com" target="_blank">links to an external site</a>)</span>
+            <button type="button" onclick="removeLink(this)">Remove</button>
+        </div>
+        <div class="link-container">
+            <label>
+                Title
+                <input type="text" name="link2Title" placeholder="Title for link 2">
+            </label>
+            <label>
+                Link 2
+                <input type="url" name="link2" placeholder="Your link 2 here">
+            </label>
+            <span>(<a href="https://youtube.com" target="_blank">links to an external site</a>)</span>
+            <button type="button" onclick="removeLink(this)">Remove</button>
+        </div>
+    </div>
+      
+
+    
+</div>
+
 </body>
 </html>
