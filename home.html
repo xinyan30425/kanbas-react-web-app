@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+        font-family: 'Arial, sans-serif';
+    }
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+    .sidebar {
+        width: 15%;
+        background-color: #f4f4f4;
+        padding: 10px;
+    }
+    .main-content {
+        width: 60%;
+        padding: 10px;
+    }
+    .additional-info {
+        width: 25%;
+        background-color: #f4f4f4;
+        padding: 10px;
+    }
+    .sidebar a, .main-content a, .additional-info a {
+        display: block;
+        margin-bottom: 5px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    table, th, td {
+        border: 1px solid black;
+    }
+    th, td {
+        padding: 8px;
+        text-align: left;
+    }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <!-- First Column: Kanbas Navigation Sidebar -->
+    <div class="sidebar">
+        <h2>Kanbas Navigation</h2>
+        <ul>
+            <a href=""target="_blank">Account</a>
+            <a href=""target="_blank">Dashboard</a>
+            <a href="#"target="_blank">Courses</a>
+            <a href=""target="_blank">Calendar</a>
+            <a href="#"target="_blank">Inbox</a>
+            <a href="#"target="_blank">History</a>
+            <a href="#"target="_blank">Studio</a>
+            <a href="#"target="_blank">Commons</a>
+            <a href="#"target="_blank">Help</a>
+        </ul>
+
+        
+    </div>
+
+    <!-- Second Column: Course Navigation Sidebar -->
+    <div class="sidebar">
+        <h2>Course Navigation</h2>
+        <ul>
+            <a href="" target="_blank">Home</a>
+            <a href="" target="_blank">Modules</a>
+            <a href="" target="_blank">Piazza</a>
+            <a href="" target="_blank">Zoom Meetings</a>
+            <a href="" target="_blank">Assignments</a>
+            <a href="" target="_blank">Quizzes</a>
+            <a href="" target="_blank">Grades</a>
+            <a href="" target="_blank">People</a>
+            <a href="#" target="_blank">Video</a>
+            <a href="#" target="_blank">Discussion</a>
+            <a href="#" target="_blank">Announcements</a>
+            <a href="#" target="_blank">Pages</a>
+            <a href="#" target="_blank">Files</a>
+            <a href="#" target="_blank">Rubrics</a>
+            <a href="#" target="_blank">Outcomes</a>
+            <a href="#" target="_blank">Collaborations</a>
+            <a href="#" target="_blank">Syllabus</a>
+            <a href="#" target="_blank">Settings</a>
+        </ul> 
+    </div>
+
+    <!-- Third Column: Home Screen with Course Content -->
+    <div class="main-content">
+        <div class="options-bar">
+            <button type="button"><i class="fas fa-compress-alt"></i> Collapse All</button>
+            <button type="button"><i class="fas fa-chart-line"></i> View Progress</button>
+            <button class="publish-all-button" onclick="toggleDropdown()">Publish All <i class="fas fa-angle-down"></i></button>
+            <button type="button"><i class="fas fa-cube"></i> Module</button> 
+        </div>
+
+        <ul>
+            <li>
+                <h2>Week 0 - INTRO</h2>
+                <ul>
+                    <li>
+                        <h3>LEARNING OBJECTIVES</h3>
+                        <ul>
+                            <li>Introduction to the course</li>
+                            <li>Learn what is Web development</li>
+                            <li>Creating a development environment</li>
+                            <li>Getting a Web Application</li>
+                            <li>Getting started with the 1st assignment</li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <h3>READING</h3>
+                        <ul>
+                            <li>Full Stack Developer - Chapter 1: Introduction</li>
+                            <li>Full Stack Developer - Chapter 2: Creating User Interface With HTML</li>
+                        </ul>
+                    </li>
+    
+                    <li>
+                        <h3>Slides</h3>
+                        <ul>
+                            <li><a href="#" target="_blank">Introduction to Web Development Links to an external site</a></li>
+                            <li><a href="#" target="_blank">Creating an HTTP server with Node.js Links to an external site.</a></li>
+                            <li><a href="#" target="_blank">Create a React Application Links to an external site.</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+    
+            <li>
+                <h2>Week 1 - HTML</h2>
+                <ul>
+                    <li>
+                        <h3>LEARNING OBJECTIVES</h3>
+                        <ul>
+                            <li>Learn how to create user interfaces with HTML</li>
+                            <li>Keep working on assignment 1</li>
+                            <li>Deploy the assignment to Netlify</li>
+                        </ul>
+                    </li>
+    
+                    <li>
+                        <h3>Reading</h3>
+                        <ul>
+                            <li>Full Stack Developer - Chapter 1: Introduction</li>
+                            <li>Full Stack Developer - Chapter 2: Creating User Interface With HTML</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- Fourth Column: Additional Information -->
+    <div class="course-status">
+        <h3>Course Status</h3>
+
+        <div class="status-icons">
+            <button type="button"><i class="fas fa-compress-alt"></i> Unpublished</button>
+            <button type="button"><i class="fas fa-chart-line"></i> Published</button>
+        </div>
+
+        <div class="options"></div>   
+            <ul>
+                <li><a href="#" target="_blank">Import Existing Content</a></li>
+                <li><a href="#" target="_blank">Import From Commons</a></li>
+                <li><a href="#" target="_blank">Choose Home Page</a></li>
+                <li><a href="#" target="_blank">View Course Stream</a></li>
+                <li><a href="#" target="_blank">New Announcement</a></li>
+                <li><a href="#" target="_blank">New Analytics</a></li>
+                <li><a href="#" target="_blank">View Course Notification</a></li>
+            </ul>
+
+            <h3>Coming Up</h3>
+            <p><a href="#">View Calendar</a></p>
+            <ul>
+                <li><a href="#" target="_blank">Lecture CS4550.12631.202410 Sep 7 at 11:45am</a></li>
+                <li><a href="#" target="_blank">CS4550.12631.202410 Sep 11 at 11:45am</a></li>
+                <li><a href="#" target="_blank">CS5610 06 SP23 Lecture Sep 11 at 6pm</a></li>
+            </ul>
+
+
+        </div>
+    
+       
+    </div>
+    
+    <style>
+    .course-status {
+        width: 25%; /* Adjust as needed */
+        padding: 10px;
+    }
+    
+    .status-icons {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    
+    .status-icons span {
+        cursor: pointer;
+    }
+    
+    .options h3, .coming-up h3 {
+        margin: 0 0 10px 0;
+    }
+    
+    .options ul, .coming-up ul {
+        list-style-type: disc;
+        margin: 0;
+        padding: 0 0 0 20px;
+    }
+    
+    .options ul li, .coming-up ul li {
+        margin-bottom: 5px;
+    }
+    </style>
+    
+</div>
+</body>
+</html>

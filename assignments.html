@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+    font-family: "Times", serif;
+}
+.container {
+    display: flex;
+}
+.sidebar {
+    width: 15%;
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.sidebar a {
+    display: block;
+    margin-bottom: 10px;
+}
+.grades {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.grades table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.grades table, .grades th, .grades td {
+    border: 1px solid #ccc;
+}
+.grades th, .grades td {
+    padding: 10px;
+    text-align: left;
+}
+.grades input[type="text"] {
+    width: 100%;
+}
+.grades select {
+    width: 100%;
+}
+.extra-info {
+    width: 20%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.options-bar {
+    display: flex;
+    align-items: center;
+}
+
+.options-bar div {
+    margin-left: auto;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- Kanbas Navigation Sidebar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="" target="_blank">Account</a></li>
+            <li><a href="" target="_blank">Dashboard</a></li>
+            <li><a href="#" target="_blank">Courses</a></li>
+            <li><a href="" target="_blank">Calendar</a></li>
+            <li><a href="#" target="_blank">Inbox</a></li>
+            <li><a href="#" target="_blank">History</a></li>
+            <li><a href="#" target="_blank">Studio</a></li>
+            <li><a href="#" target="_blank">Commons</a></li>
+            <li><a href="#" target="_blank">Help</a></li>
+        </ul>
+    </div>
+
+    <!-- Course Navigation Sidebar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="" target="_blank">Home</a></li>
+            <li><a href="" target="_blank">Modules</a></li>
+            <li><a href="" target="_blank">Piazza</a></li>
+            <li><a href="" target="_blank">Zoom Meetings</a></li>
+            <li><a href="" target="_blank">Assignments</a></li>
+            <li><a href="" target="_blank">Quizzes</a></li>
+            <li><a href="" target="_blank">Grades</a></li>
+            <li><a href="" target="_blank">People</a></li>
+            <li><a href="#" target="_blank">Panopto Video</a></li>
+            <li><a href="#" target="_blank">Discussions</a></li>
+            <li><a href="#" target="_blank">Announcements</a></li>
+            <li><a href="#" target="_blank">Pages</a></li>
+            <li><a href="#" target="_blank">Files</a></li>
+            <li><a href="#" target="_blank">Rubics</a></li>
+            <li><a href="#" target="_blank">Outcomes</a></li>
+            <li><a href="#" target="_blank">Collaborations</a></li>
+            <li><a href="" target="_blank">Syllabus</a></li>
+            <li><a href="" target="_blank">Settings</a></li>      
+        </ul>
+    </div>
+
+    <!-- Grades Screen -->
+    <div class="grades">
+        <div class="options-bar">
+            <div><input type="text" placeholder="Search for Assignments"></div>
+            <button type="button"><i class="fas fa-chart-line"></i> Group</button>
+            <button type="button"><i class="fas fa-chart-line"></i> Assignment</button>
+            <button class="publish-all-button" onclick="toggleDropdown()">Edit Assignment Dates <i class="fas fa-angle-down"></i></button>
+        </div>
+
+        <div>
+            <br>
+            <strong>ASSIGNMENTS 40% OF TOTAL</strong>
+            <div class="dropdown">
+                <button class="dropbtn">Edit</button>
+                <div class="dropdown-content">
+                  <a href="#">Edit</a>
+                  <a href="#">Speed Grader</a>
+                  <a href="#">Duplicate</a>
+                  <a href="#">Delete</a>
+                  <a href="#">Move To...</a>
+                  <a href="#">Send To...</a>
+                  <a href="#">Copy To...</a>
+                  <a href="#">Share to Commons</a>
+                </div>
+            </div>
+
+            <ul>
+                <li><a href="#" target="_blank">A1-ENV +HTML </a>| Not Available yet</li>
+                <li><a href="#" target="_blank">A2-CSS +BOOTSTRAP Multiple Modules</a> | Not Available yet</li>
+                <li><a href="#" target="_blank">A3-JS+REACT </a>| Not Available yet</li>
+                <li><a href="#" target="_blank">A4-STATE+REDUX </a>| Not Available yet</li>
+                <li><a href="#" target="_blank">A5-NODE + SESSION </a>| Not Available yet</li>
+                <li><a href="#" target="_blank">A6-MONGO + MONGOOSE </a>| Not Available yet</li>
+
+            </ul>  
+        </div>
+
+        <div>
+            <br>
+            <strong>QUIZZES 10% of Total</strong>
+            <div class="dropdown">
+                <button class="dropbtn">Edit</button>
+                <div class="dropdown-content">
+                  <a href="#">Edit</a>
+                  <a href="#">Speed Grader</a>
+                  <a href="#">Duplicate</a>
+                  <a href="#">Delete</a>
+                  <a href="#">Move To...</a>
+                  <a href="#">Send To...</a>
+                  <a href="#">Copy To...</a>
+                  <a href="#">Share to Commons</a>
+                </div>
+            </div>
+
+            <ul>
+                <li><a href="#" target="_blank">Q1 - HTML </a>| Not Available yet</li>
+                <li><a href="#" target="_blank">Q2 - CSS</a> | Not Available yet</li>
+                <li><a href="#" target="_blank">Q3 - JS,ES6 </a>| Not Available yet</li>
+                <li><a href="#" target="_blank">Q4 - NODE </a>| Not Available yet</li>
+                <li><a href="#" target="_blank">Q5 - A6-MONGO </a>| Not Available yet</li>
+            </ul>  
+        </div>
+
+        <div>
+            <br>
+            <strong>EXAMS 20% of Total</strong>
+            <div class="dropdown">
+                <button class="dropbtn">Edit</button>
+                <div class="dropdown-content">
+                  <a href="#">Edit</a>
+                  <a href="#">Speed Grader</a>
+                  <a href="#">Duplicate</a>
+                  <a href="#">Delete</a>
+                  <a href="#">Move To...</a>
+                  <a href="#">Send To...</a>
+                  <a href="#">Copy To...</a>
+                  <a href="#">Share to Commons</a>
+                </div>
+            </div>
+
+            <ul>
+                <li><a href="#" target="_blank">Midterm Multiple Modules</a>| Not Available yet</li>
+                <li><a href="#" target="_blank">Final Multiple Modules</a> | Not Available yet</li>
+                
+            </ul>  
+        </div>
+
+        <div>
+            <br>
+            <strong>PROJECT 30% of Total</strong>
+            <div class="dropdown">
+                <button class="dropbtn">Edit</button>
+                <div class="dropdown-content">
+                  <a href="#">Edit</a>
+                  <a href="#">Speed Grader</a>
+                  <a href="#">Duplicate</a>
+                  <a href="#">Delete</a>
+                  <a href="#">Move To...</a>
+                  <a href="#">Send To...</a>
+                  <a href="#">Copy To...</a>
+                  <a href="#">Share to Commons</a>
+                </div>
+            </div>
+
+            <ul>
+                <li><a href="#" target="_blank">Project Multiple </a>| Not Available yet</li>
+                
+            </ul>  
+        </div>
+        
+</div>
+
+</body>
+</html>

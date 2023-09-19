@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    font-family: "Times New Roman", Times, serif;
+  }
+  .profile-details {
+    width: 50%;
+    margin: auto;
+  }
+  .profile-details th, .profile-details td {
+    padding: 10px;
+    text-align: left;
+  }
+  .navigation {
+    list-style-type: none;
+  }
+  .navigation li {
+    margin-bottom: 5px;
+  }
+</style>
+</head>
+<body>
+
+
+    <form class="edit-details" action="index.html" method="get">
+        <div>
+            <br>
+            <strong>Xinyan Liu</strong>
+        </div>
+
+        <label>
+          Xinyan 
+          <input type="text" name="first-name" value="Your First Name">
+        </label>
+
+        <label>
+          Liu
+          <input type="text" name="last-name" value="Your Last Name">
+        </label>
+
+        <label>
+            pronouns:
+            <select name="pronouns">
+                <option value="he/him">He/Him</option>
+                <option value="she/her">She/Her</option>
+                <option value="they/them">They/Them</option>
+                <option value="other">Other</option>
+            </select>
+        </label>
+
+        <label>
+            Title:
+            <input type="text" name="last-name" value="Your Last Name">
+        </label>
+
+        <div>
+            <br>
+            <strong>Contact</strong>
+        </div>
+
+        <label>
+          Email
+          <input type="email" name="email" value="Your Email">
+        </label>
+        <div>
+            <br>
+            <strong>Biography</strong>
+            
+        </div>
+        <label>
+          Biography
+          CS Graduate Student,Software Engineering, Machine Learning,AI, Sustainability
+          <textarea name="biography">Your biography here...</textarea>
+        </label>
+        <div>
+            <br>
+            <strong>Links</strong>
+        </div>
+
+        <label>
+          Link 1
+          <input type="url" name="link1" value="Your link 1 here">
+        </label>
+        <label>
+          Link 2
+          <input type="url" name="link2" value="Your link 2 here">
+        </label>
+
+        <div>
+            <br>
+                <button type="submit">Save Profile</button>
+                <button type="button" onclick="location.href='index.html'">Cancel Editing</button>
+                <button onclick="location.href='editprofile.html'">Edit Profile</button>
+        </div>
+
+        
+
+
+      </form>
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    font-family: "Times New Roman", Times, serif;
+  }
+  .profile-details {
+    width: 50%;
+    margin: auto;
+  }
+  .profile-details th, .profile-details td {
+    padding: 10px;
+    text-align: left;
+  }
+  .navigation {
+    list-style-type: none;
+  }
+  .navigation li {
+    margin-bottom: 5px;
+  }
+
+  th, td {
+    border-right: 1px solid #000; /* This adds a border to the right side of each cell */
+  }
+  th:last-child, td:last-child {
+    border-right: none; /* This removes the border for the last cell in each row */
+  }
+</style>
+</head>
+<body>
+
+<ul class="navigation">
+  <li><a href="#">Account</a></li>
+  <li><a href="profile.html">Profile</a></li>
+  <li><a href="#">Courses</a></li>
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Assignments</a></li>
+  <li><a href="#">Grades</a></li>
+  <!-- Add other navigation links as needed -->
+</ul>
+
+<table class="profile-details">
+  <tr>
+    <th>Name</th>
+    <td>Xinyan Liu</td>
+  </tr>
+  <tr>
+    <th>Contact</th>
+    <td>liu.xinyan1@northeastern.edu</td>
+  </tr>
+  <tr>
+    <th>Biography</th>
+    <td>Your biography here...</td>
+  </tr>
+  <tr>
+    <th>Links</th>
+    <td>
+      <a href="#">Your link 1 here</a><br>
+      <a href="#">Your link 2 here</a><br>
+      <!-- Add other links as needed -->
+    </td>
+  </tr>
+</table>
+<button onclick="location.href='edit.html'">Edit Profile</button>
+
+</body>
+</html>
