@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<style>
+body {
+    font-family: "Times", serif;
+    margin:0;
+    padding:0;
+}
+
+.small {
+    font-size: 50%;
+}
+
+.grades {
+    width: 80%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.list-group,.list-group-item {
+    border-radius: 0 !important;
+    border-left: 5px solid green;
+}
+
+.custom-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    content: ">" !important;
+    color: #6c757d !important; /* Adjust color if needed */
+    padding: 0 0.5rem !important; /* Adjust spacing if needed */
+}
+
+.options-bar-spacing {
+    margin-bottom: 20px;  /* Adjust this value according to your desired spacing */
+}
+
+.green-icon {
+    color: green;
+}
+
+.header-bg {
+    background-color: #E5E5E5; /* This is the assumed background color. You can adjust it. */
+    padding: 5px 15px; /* Adjust padding as per your design */
+}
+
+.rounded-rectangle {
+    border: 1px solid #333;
+    border-radius: 10px; /* Adjust for the desired roundedness */
+    padding: 5px 10px; /* Adjust for desired padding */
+}
+
+.small-gap {
+    margin-left: 0.25rem;  /* or adjust this value to your preference */
+}
+
+.icons-container {
+    display: flex;
+    flex-direction: column; /* To make icons stack vertically */
+    justify-content: space-between; /* To spread the icons to match the height of the adjacent text container */
+    margin-right: 5px; /* Some spacing between the icons and the text */
+}
+
+.dots-column {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px; /* Adjust this value based on the desired spacing between the columns */
+}
+
+.vertical-bars {
+    transform: rotate(90deg);
+}
+
+</style>
+
+</head>
+<body>
+    <nav aria-label="breadcrumb" class="mt-2 ml-2 custom-breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="course.html">Course Name</a></li>
+          <li class="breadcrumb-item"><a href="assignments.html">Assignment</a></li>
+        </ol>
+</nav>
+
+<div class="d-flex">
+    <!-- Grades Screen -->
+    <div class="grades">
+        <!-- Bootstrap's justify-content-between class to separate content between left and right in a flex container -->
+        <div class="options-bar d-flex justify-content-between options-bar-spacing">
+            <input type="text" placeholder="Search for Assignments" class="form-control w-25">
+            <div class="d-flex float-end">
+                <button type="button" class="btn btn-primary me-2"><i class="fas fa-plus"></i> <i class="fas fa-chart-line"></i> Group</button>
+                <button type="button" class="btn btn-danger me-2"><i class="fas fa-plus"></i> <i class="fas fa-chart-line"></i> Assignment</button>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-ellipsis-h"></i></button>
+                </div>
+            </div>
+        </div>
+
+       
+         <!-- Assignments Section (repeat similar structure for Quizzes, Exams, and Project sections) -->
+         <div class="header-bg d-flex align-items-center">
+            <h5 class="d-flex align-items-center mb-0">
+                <i class="fas fa-ellipsis-v"></i>
+                <i class="fas fa-ellipsis-v dot-spacing"></i>
+                ASSIGNMENTS
+            </h5>
+            <div class="d-flex align-items-center ml-auto">
+                <span class="rounded-rectangle">
+                    40% OF TOTAL
+                </span>
+                <i class="fas fa-plus small-gap"></i>
+                <i class="fas fa-ellipsis-h vertical-bars small-gap"></i>
+            </div>
+        </div>
+        
+        <div>
+            <ul class="list-group mb-2">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div class="d-flex">
+                        <!-- Icons Container -->
+                        <div class="dots-column">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                        <div class="dots-column">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                        <div>
+                            <i class="fas fa-book green-icon"></i>
+                        </div>
+     
+                        <!-- Texts Container -->
+                        <div>
+                            <a href="assignmentedit.html" class="text-decoration-none text-dark">A1 SETUP</a>
+                            <br>
+                            <small class="text-muted">Due Date: MM/DD/YYYY</small>
+                        </div>
+                    </div>
+                
+                    <span class="action-icons float-end">
+                        <i class="fas fa-check-circle text-success"></i>
+                        <i class="fas fa-ellipsis-h vertical-bars ml-1"></i>
+                    </span>
+                </li>
+
+                
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div class="d-flex">
+                        <!-- Icons Container -->
+                        <div class="dots-column">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                        <div class="dots-column">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                        <div>
+                            <i class="fas fa-book green-icon"></i>
+                        </div>
+     
+                        <!-- Texts Container -->
+                        <div>
+                            <a href="assignmentedit.html" class="text-decoration-none text-dark">A2 HTML</a>
+                            <br>
+                            <small class="text-muted">Due Date: MM/DD/YYYY</small>
+                        </div>
+                    </div>
+                
+                    <span class="action-icons float-end">
+                        <i class="fas fa-check-circle text-success"></i>
+                        <i class="fas fa-ellipsis-h vertical-bars ml-1"></i>
+                    </span>
+                </li>
+                
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div class="d-flex">
+                        <!-- Icons Container -->
+                        <div class="dots-column">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                        <div class="dots-column">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                        <div>
+                            <i class="fas fa-book green-icon"></i>
+                        </div>
+     
+                        <!-- Texts Container -->
+                        <div>
+                            <a href="assignmentedit.html" class="text-decoration-none text-dark">A3 CSS</a>
+                            <br>
+                            <small class="text-muted">Due Date: MM/DD/YYYY</small>
+                        </div>
+                    </div>
+                
+                    <span class="action-icons float-end">
+                        <i class="fas fa-check-circle text-success"></i>
+                        <i class="fas fa-ellipsis-h vertical-bars ml-1"></i>
+                    </span>
+                </li>
+                
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div class="d-flex">
+                        <!-- Icons Container -->
+                        <div class="dots-column">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                        <div class="dots-column">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                        <div>
+                            <i class="fas fa-book green-icon"></i>
+                        </div>
+     
+                        <!-- Texts Container -->
+                        <div>
+                            <a href="assignmentedit.html" class="text-decoration-none text-dark">A4 BOOTSTRAP</a>
+                            <br>
+                            <small class="text-muted">Due Date: MM/DD/YYYY</small>
+                        </div>
+                    </div>
+                
+                    <span class="action-icons float-end">
+                        <i class="fas fa-check-circle text-success"></i>
+                        <i class="fas fa-ellipsis-h vertical-bars ml-1"></i>
+                    </span>
+                </li>
+
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div class="d-flex">
+                        <!-- Icons Container -->
+                        <div class="dots-column">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                        <div class="dots-column">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                        <div>
+                            <i class="fas fa-book green-icon"></i>
+                        </div>
+     
+                        <!-- Texts Container -->
+                        <div>
+                            <a href="assignmentedit.html" class="text-decoration-none text-dark">A5 JAVASCRIPT</a>
+                            <br>
+                            <small class="text-muted">Due Date: MM/DD/YYYY</small>
+                        </div>
+                    </div>
+                
+                    <span class="action-icons float-end">
+                        <i class="fas fa-check-circle text-success"></i>
+                        <i class="fas fa-ellipsis-h vertical-bars ml-1"></i>
+                    </span>
+                </li>
+
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div class="d-flex">
+                        <!-- Icons Container -->
+                        <div class="dots-column">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                        <div class="dots-column">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                        <div>
+                            <i class="fas fa-book green-icon"></i>
+                        </div>
+     
+                        <!-- Texts Container -->
+                        <div>
+                            <a href="assignmentedit.html" class="text-decoration-none text-dark">A6 REACT</a>
+                            <br>
+                            <small class="text-muted">Due Date: MM/DD/YYYY</small>
+                        </div>
+                    </div>
+                
+                    <span class="action-icons float-end">
+                        <i class="fas fa-check-circle text-success"></i>
+                        <i class="fas fa-ellipsis-h vertical-bars ml-1"></i>
+                    </span>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="header-bg d-flex justify-content-between align-items-center">
+            <h5 class="d-flex align-items-center mb-0">
+                <i class="fas fa-ellipsis-v"></i>
+                <i class="fas fa-ellipsis-v dot-spacing"></i>
+                EXAMS
+            </h5>
+            <span class="rounded-rectangle">
+                20% OF TOTAL
+            </span>
+         </div>
+
+
+        <ul class="list-group mb-2">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div class="d-flex">
+                    <!-- Icons Container -->
+                    <div class="dots-column">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                    <div class="dots-column">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                    <div>
+                        <i class="fas fa-book green-icon"></i>
+                    </div>
+ 
+                    <!-- Texts Container -->
+                    <div>
+                        <a href="assignmentedit.html" class="text-decoration-none text-dark">Q1 HTML</a>
+                        <br>
+                        <small class="text-muted">Due Date: MM/DD/YYYY</small>
+                    </div>
+                </div>
+            
+                <span class="action-icons float-end">
+                    <i class="fas fa-check-circle text-success"></i>
+                    <i class="fas fa-ellipsis-h vertical-bars ml-1"></i>
+                </span>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div class="d-flex">
+                    <!-- Icons Container -->
+                    <div class="dots-column">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                    <div class="dots-column">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                    <div>
+                        <i class="fas fa-book green-icon"></i>
+                    </div>
+ 
+                    <!-- Texts Container -->
+                    <div>
+                        <a href="assignmentedit.html" class="text-decoration-none text-dark">Q2 CSS</a>
+                        <br>
+                        <small class="text-muted">Due Date: MM/DD/YYYY</small>
+                    </div>
+                </div>
+            
+                <span class="action-icons float-end">
+                    <i class="fas fa-check-circle text-success"></i>
+                    <i class="fas fa-ellipsis-h vertical-bars ml-1"></i>
+                </span>
+            </li>
+            
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div class="d-flex">
+                    <!-- Icons Container -->
+                    <div class="dots-column">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                    <div class="dots-column">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                    <div>
+                        <i class="fas fa-book green-icon"></i>
+                    </div>
+ 
+                    <!-- Texts Container -->
+                    <div>
+                        <a href="assignmentedit.html" class="text-decoration-none text-dark">Q3 JS,ES6</a>
+                        <br>
+                        <small class="text-muted">Due Date: MM/DD/YYYY</small>
+                    </div>
+                </div>
+            
+                <span class="action-icons float-end">
+                    <i class="fas fa-check-circle text-success"></i>
+                    <i class="fas fa-ellipsis-h vertical-bars ml-1"></i>
+                </span>
+            </li>
+
+        </div>  
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+</script>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation Configuration</title>
+<style>
+    .title {
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+    .instructions {
+        margin-bottom: 20px;
+    }
+    .draggable-item {
+        margin: 5px 0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        cursor: move;
+    }
+    .instructions {
+    font-size: larger;
+  }
+
+  .large-font {
+    font-size: larger;
+  }
+  .small-font {
+    font-size: smaller;
+  }
+</style>
+</head>
+<body>
+
+<h1 class="title">Course Navigation</h1>
+<p class="instructions">Drag and drop items to reorder them in the course navigation.</p>
+
+<div id="draggable-container">
+    <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag1">Home</div>
+    <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag2">Syllabus</div>
+    <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag3">Announcements</div>
+    <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag3">Modules</div>
+    <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag3">Zoom Meetings</div>
+    <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag3">Quizzes</div>
+    <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag3">Assignments</div>
+    <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag3">Files</div>
+    <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag3">Pages</div>
+    <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag3">Rubrics</div>
+    <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag3">People</div>
+    <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag3">Grades</div>
+    <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag3">Microsoft Teams Meetings</div>
+    <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag3">Progress Reports</div>
+</div>
+
+<h1 class="title">Kanbas Navigation</h1>
+<p class="instructions">Drag items here to hide them from students</p>
+<br>
+<p>Disabling most pages will cause students who visit those pages to be redirected to the course home page</p>
+
+
+<div id="draggable-container">
+    <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag1"><span class = "larger-font">Collaborations</span><br>
+        <span class = "small-font">Page disabled,will redirect to course home page</span></div>
+    <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag1"><span class = "larger-font">FACT Reporting and Photo Roster</span><br>
+        <span class = "small-font">Page disabled,will redirect to course home page</span></div>
+     <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag1"><span class = "larger-font">Accessibility Report</span><br>
+        <span class = "small-font">Page disabled,will redirect to course home page</span></div>
+
+    <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag1"><span class = "larger-font">Poll Everywhere</span><br>
+        <span class = "small-font">Page disabled,will redirect to course home page</span></div>
+    <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag1"><span class = "larger-font">HelioCampus Assessment</span><br>
+        <span class = "small-font">Page disabled,will redirect to course home page</span></div>
+    <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag1"><span class = "larger-font">Chat</span><br>
+        <span class = "small-font">Page disabled,will redirect to course home page</span></div>
+    <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag1"><span class = "larger-font">Leganto Course Materials</span><br>
+        <span class = "small-font">Page disabled,will redirect to course home page</span></div>
+     <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag1"><span class = "larger-font">SCORM</span><br>
+        <span class = "small-font">Page disabled,will redirect to course home page</span></div>
+    <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag1"><span class = "larger-font">Attendance</span><br>
+        <span class = "small-font">Page disabled,will redirect to course home page</span></div>
+    <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag1"><span class = "larger-font">Piazza</span><br>
+        <span class = "small-font">Page disabled,will redirect to course home page</span></div>
+    <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag1"><span class = "larger-font">Campus Pack</span><br>
+        <span class = "small-font">Page disabled,will redirect to course home page</span></div>
+    <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag1"><span class = "larger-font">Zoom HIPAA</span><br>
+        <span class = "small-font">Page disabled,will redirect to course home page</span></div>
+    <var><div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag1"><span class = "larger-font">OneDrive</span><br>
+        <span class = "small-font">Page disabled,will redirect to course home page</span></div></var>
+                                                
+    <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag1"><span class = "larger-font">Gradescope</span><br>
+        <span class = "small-font">Page disabled,will redirect to course home page</span></div>
+
+
+
+
+</div>
+
+
+
+
+
+<script>
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+
+    function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        var draggedElement = document.getElementById(data);
+        var dropTarget = ev.target;
+        while(!dropTarget.classList.contains("draggable-item")) {
+            dropTarget = dropTarget.parentElement;
+        }
+        dropTarget.parentElement.insertBefore(draggedElement, dropTarget);
+    }
+
+    document.getElementById('draggable-container').addEventListener('dragover', allowDrop);
+    document.getElementById('draggable-container').addEventListener('drop', drop);
+</script>
+
+</body>
+</html>

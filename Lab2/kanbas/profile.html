@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Profile</title>
+<style>
+    h1 {
+        font-size: 24px; /* or any other font size you prefer */
+    }
+    .profile{
+    display: flex;             /* Makes this container a flex container */
+    align-items: center;       /* Vertically centers items in the container */
+    }
+
+    .profile-section {
+    display: flex;
+    }
+
+
+    .icon-container {
+        font-size: 80px;
+        margin-bottom: 20px;
+        margin-right: 20px;
+    }
+
+    .main-content {
+    position: relative;  /* Makes sure the button is positioned relative to this container */
+    /* Other styles can be added here as required */ 
+    }
+
+    .top-right-button {
+    position: absolute;
+    top: 50px;  /* or whatever your current setting is */
+    right: 10px;
+    margin-bottom: 40px;  /* Adjust this value based on your breadcrumb height */
+    }
+
+    .user-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    }
+
+</style>
+</head>
+
+<body>
+<nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Xinyan Liu's Profile</a></li>
+        </ol>
+</nav>
+
+<div class="d-flex" id="profileContent">
+    <div class="profile">
+        <button type="button" onclick="location.href='editprofile.html'" class="btn btn-secondary top-right-button"><i class="fas fa-pencil-alt"></i> Edit Editing</button>
+
+        <div class="profile-section">
+            <div class="icon-container">
+                <i class="fas fa-user account-icon"></i>
+            </div>
+
+            <!-- This div holds all content to the right of the icon -->
+            <div class="profile-content-right">
+                <div class="user-name">
+                    Xinyan Liu
+                </div>
+
+                <h1>Contact</h1>
+                <div class="info-text">No registered services, you can add some on the <a href="#" class="settings-link">settings</a> page.</div>
+                <h1>Biography</h1>
+                <div class="info-text">Your biography here...</div>
+                <h1>Links</h1>
+                <div class="links-section">
+                    <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+

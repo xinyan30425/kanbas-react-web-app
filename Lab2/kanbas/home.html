@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+
+</style>
+</head>
+
+<body>
+
+<div class="d-flex">
+<!-- First Column: Kanbas Navigation Sidebar -->
+<div class="sidebar" id="first-sidebar">
+    <a href="javascript:void(0);" onclick="toggleAccountNavigation();">
+        <i class="fas fa-user account-icon"></i>
+        <span>Account</span>
+    </a>
+
+    <a href="javascript:void(0);" onclick="loadPageIntoIframe('dashboard.html')">
+        <i class="fas fa-tachometer-alt large-icon"></i>
+        <span>Dashboard</span>
+    </a>
+
+
+    <a href="javascript:void(0);" onclick="toggleCourseNavigation();" class="selected">
+        <i class="fas fa-book large-icon"></i>
+        <span>Courses</span>
+    </a>
+
+    <a href="#" target="_blank">
+        <i class="fas fa-calendar-alt large-icon"></i>
+        <span>Calendar</span>
+    </a>
+    <a href="#" target="_blank">
+        <i class="fas fa-inbox large-icon"></i>
+        <span>Inbox</span>
+    </a>
+    <a href="#" target="_blank">
+        <i class="fas fa-history large-icon"></i>
+        <span>History</span>
+    </a>
+    <a href="#" target="_blank">
+        <i class="fas fa-palette large-icon"></i>
+        <span>Studio</span>
+    </a>
+    <a href="#" target="_blank">
+        <i class="fas fa-share-alt large-icon"></i>
+        <span>Commons</span>
+    </a>
+    <a href="#" target="_blank">
+        <i class="fas fa-question-circle large-icon"></i>
+        <span>Help</span>
+    </a>
+</div>
+
+<!-- Account Navigation Sidebar -->
+<div class="nested-sidebar" id="account-navigation-sidebar" style="display: none;">
+    <!-- Account Navigation Links -->
+        <a href="#" target="_blank">Notification</a>
+        <a href="javascript:void(0);" onclick="loadPageIntoIframe('profile.html')">Profile</a>
+        <a href="#" target="_blank">Files</a>
+        <a href="#" target="_blank">Settings</a>
+        <a href="#" target="_blank">ePortfolios</a>
+        <a href="#" target="_blank">Shared Content</a>
+        <a href="#" target="_blank">The Hub</a>
+        <a href="#" target="_blank">Qwickly Course Tools</a>
+        <a href="#" target="_blank">Global Announcement</a>
+        <!-- ... other sub-menu links ... -->
+</div>
+
+<!-- Course Navigation Sidebar -->
+<div class="nested-sidebar" id="course-navigation-sidebar" style="display: block;">
+        <a href="javascript:void(0);" class="nested-sidebar-selected" onclick="loadPageIntoIframe('course.html');">Home</a>
+        <!-- <a href="javascript:void(0);" onclick="loadPageIntoIframe('dashboard.html')">Modules</a> -->
+        <a href="#" target="_blank">Modules</a>
+        <a href="#" target="_blank">Piazza</a>
+        <a href="#" target="_blank">Zoom Meetings</a>
+        <a href="javascript:void(0);" onclick="loadPageIntoIframe('assignments.html')">Assignments</a>
+        <a href="#" target="_blank">Quizzes</a>
+        <a href="javascript:void(0);" onclick="loadPageIntoIframe('grades.html')">Grades</a>
+        <a href="#" target="_blank">People</a>
+        <a href="#" target="_blank">Video</a>
+        <a href="#" target="_blank">Discussion</a>
+        <a href="#" target="_blank">Announcements</a>
+        <a href="#" target="_blank">Pages</a>
+        <a href="#" target="_blank">Files</a>
+        <a href="#" target="_blank">Rubrics</a>
+        <a href="#" target="_blank">Outcomes</a>
+        <a href="#" target="_blank">Collaborations</a>
+        <a href="#" target="_blank">Syllabus</a>
+        <a href="settings.html" target="_blank">Settings</a>
+</div>
+
+<!-- <div class="content-area">
+    <iframe id="contentFrame" frameborder="0" width="100%" height="100%" src="course.html"></iframe>
+</div> -->
+
+<div class="content-area hide-on-mobile">
+    <iframe id="contentFrame" frameborder="0" width="100%" height="100%" src="course.html"></iframe>
+</div>
+
+
+</div>
+    <!-- JavaScript to Toggle Sidebars -->
+    <script> 
+        function toggleAccountNavigation() {
+            var accountNavigation = document.getElementById('account-navigation-sidebar');
+            var courseNavigation = document.getElementById('course-navigation-sidebar');
+            var allNavItems = document.querySelectorAll('.nested-sidebar a');
+            var profileNavItem = document.querySelector('#account-navigation-sidebar a:nth-child(2)');
+
+            // Hide/Show the correct sidebars.
+            courseNavigation.style.display = 'none';
+            accountNavigation.style.display = 'block';
+
+            // Remove the selected class from all nav items.
+            allNavItems.forEach(function(item) {
+                item.classList.remove('nested-sidebar-selected');
+            });
+
+            // Add the selected class to the Profile nav item.
+            profileNavItem.classList.add('nested-sidebar-selected');
+
+            // Load profile.html into the iframe.
+            loadPageIntoIframe('profile.html');
+        }
+
+        function toggleCourseNavigation() {
+            var accountNavigation = document.getElementById('account-navigation-sidebar');
+            var courseNavigation = document.getElementById('course-navigation-sidebar');
+            var allNavItems = document.querySelectorAll('.nested-sidebar a');
+            var homeNavItem = document.querySelector('#course-navigation-sidebar a:nth-child(1)');
+
+            // Hide/Show the correct sidebars.
+            accountNavigation.style.display = 'none';
+            courseNavigation.style.display = 'block';
+
+            // Remove the selected class from all nav items.
+            allNavItems.forEach(function(item) {
+                item.classList.remove('nested-sidebar-selected');
+            });
+
+            // Add the selected class to the Home nav item.
+            homeNavItem.classList.add('nested-sidebar-selected');
+
+            // Load course.html into the iframe.
+            loadPageIntoIframe('course.html');
+        }
+
+
+
+
+
+
+
+
+        // function loadProfile() {
+        //     var contentFrame = document.getElementById('contentFrame');
+        //     contentFrame.src = 'profile.html';
+        // }
+
+        function loadPageIntoIframe(url) {
+            var contentFrame = document.getElementById('contentFrame');
+            contentFrame.src = url;
+
+            var accountNavigation = document.getElementById('account-navigation-sidebar');
+        var courseNavigation = document.getElementById('course-navigation-sidebar');
+
+        if (url === 'dashboard.html') {
+            // Hide both nested sidebars if loading the dashboard page
+            accountNavigation.style.display = 'none';
+            courseNavigation.style.display = 'none';
+        }
+
+        }
+
+        // function toggleCheck(element) {
+        //     if (element.style.color === 'green') {
+        //     element.style.color = 'gray';
+        //      } else {
+        //     element.style.color = 'green';
+        //     }
+        // } 
+
+        document.addEventListener('DOMContentLoaded', function() {
+        // Get all the sidebar links.
+        let links = document.querySelectorAll('.sidebar a');
+        
+        // Add click event to each link.
+        links.forEach(function(link) {
+            link.addEventListener('click', function() {
+                // Remove the .selected-link class from all links.
+                links.forEach(l => l.classList.remove('selected'));
+                
+                // Add the .selected-link class to the clicked link.
+                this.classList.add('selected');
+            });
+        });
+    });
+
+        document.addEventListener('DOMContentLoaded', function() {
+        // Get all the sidebar links.
+        let links = document.querySelectorAll('.nested-sidebar a');
+        
+        // Add click event to each link.
+        links.forEach(function(link) {
+            link.addEventListener('click', function() {
+                // Remove the .selected-link class from all links.
+                links.forEach(l => l.classList.remove('nested-sidebar-selected'));
+                
+                // Add the .selected-link class to the clicked link.
+                this.classList.add('nested-sidebar-selected');
+            });
+        });
+    });
+    </script>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

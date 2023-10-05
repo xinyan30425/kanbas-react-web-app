@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+    h1, h2, h3{
+        font-size: 18px;
+    }
+
+    .custom-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    content: ">" !important;
+    color: #6c757d !important; /* Adjust color if needed */
+    padding: 0 0.5rem !important; /* Adjust spacing if needed */
+    }
+
+    .vertical-bars {
+    transform: rotate(90deg);
+}
+
+</style>
+</head>
+<body>
+<nav aria-label="breadcrum" class="mt-2 ml-2 custom-breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Course Name</a></li>
+          <li class="breadcrumb-item"><a href="#">Modules</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Home</li>
+        </ol>
+</nav>
+
+<div class="d-flex">
+    <!-- Home Screen with Course Content -->
+    <div class="main-content">
+        <div class="options-bar">
+            <button type="button"><i class="fas fa-compress-alt"></i> Collapse All</button>
+            <button type="button"><i class="fas fa-chart-line"></i> View Progress</button>
+            <div class="dropdown float-end">
+                <button class="btn btn-secondary dropdown-toggle publish-all-button" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Publish All <i class="fas fa-angle-down"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Option 1</a>
+                  <a class="dropdown-item" href="#">Option 2</a>
+                  <!-- Add more dropdown items here -->
+                </div>
+            </div>      
+            <button type="button" class="module-button"><i class="fas fa-check"></i> <i class="fas fa-cube"></i> Module</button>
+        </div>
+       
+          
+        <ul>
+            <li>
+                <h2 class="list-group-item list-group-item-secondary green-border-left">Week 0 - INTRO
+                    <span class="action-icons">
+                        <i class="fas fa-check-circle text-success"></i>
+                        <i class="fas fa-ellipsis-h vertical-bars ml-1"></i>
+                    </span>
+                </h2>
+
+                <ul>
+                    <li class="green-border-left">
+                        <h3>LEARNING OBJECTIVES</h3>
+                        <ul>
+                            <li>Introduction to the course
+                                <span class="action-icons">
+                                    <i class="fas fa-check-circle text-success"></i>
+                                    <i class="fas fa-ellipsis-h vertical-bars ml-1"></i>
+                                </span>
+                            </li>
+                            <li>Learn what is Web development
+                                <span class="action-icons">
+                                    <i class="fas fa-check-circle text-success"></i>
+                                    <i class="fas fa-ellipsis-h vertical-bars ml-1"></i>
+                                </span>
+                            </li>
+                            <li>Creating a development environment
+                                <span class="action-icons">
+                                    <i class="fas fa-check-circle text-success"></i>
+                                    <i class="fas fa-ellipsis-h vertical-bars ml-1"></i>
+                                </span>
+                            </li>
+                            <li>Getting a Web Application
+                                <span class="action-icons">
+                                    <i class="fas fa-check-circle text-success"></i>
+                                    <i class="fas fa-ellipsis-h vertical-bars ml-1"></i>
+                                </span>
+                            </li>
+                            <li>Getting started with the 1st assignment
+                                <span class="action-icons">
+                                    <i class="fas fa-check-circle text-success"></i>
+                                    <i class="fas fa-ellipsis-h vertical-bars ml-1"></i>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="green-border-left">
+                        <h3>READING</h3>
+                        <ul>
+                            <li>Full Stack Developer - Chapter 1: Introduction
+                                <span class="action-icons">
+                                    <i class="fas fa-check-circle text-success"></i>
+                                    <i class="fas fa-ellipsis-h vertical-bars ml-1"></i>
+                                </span>
+                            </li>
+                            <li>Full Stack Developer - Chapter 2: Creating User Interface With HTML
+                                <span class="action-icons">
+                                    <i class="fas fa-check-circle text-success"></i>
+                                    <i class="fas fa-ellipsis-h vertical-bars ml-1"></i>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+    
+                </ul>
+            </li>
+    
+            <li>
+                <h2 class="list-group-item list-group-item-secondary green-border-left">Week 1 - HTML
+                    <span class="action-icons">
+                        <i class="fas fa-check-circle text-success"></i>
+                        <i class="fas fa-ellipsis-h vertical-bars ml-1"></i>
+                    </span>
+                </h2>
+                <ul>
+                    <li class="green-border-left">
+                        <h3>LEARNING OBJECTIVES</h3>
+                        <ul>
+                            <li>Learn how to create user interfaces with HTML
+                                <span class="action-icons">
+                                    <i class="fas fa-check-circle text-success"></i>
+                                    <i class="fas fa-ellipsis-h vertical-bars ml-1"></i>
+                                </span>
+                            </li>
+                            <li>Keep working on assignment 1
+                                <span class="action-icons">
+                                    <i class="fas fa-check-circle text-success"></i>
+                                    <i class="fas fa-ellipsis-h vertical-bars ml-1"></i>
+                                </span>
+                            </li>
+                            <li>Deploy the assignment to Netlify
+                                <span class="action-icons">
+                                    <i class="fas fa-check-circle text-success"></i>
+                                    <i class="fas fa-ellipsis-h vertical-bars ml-1"></i>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+    
+                    <li class="green-border-left">
+                        <h3>Reading</h3>
+                        <ul>
+                            <li>Full Stack Developer - Chapter 1: Introduction
+                                <span class="action-icons">
+                                    <i class="fas fa-check-circle text-success"></i>
+                                    <i class="fas fa-ellipsis-h vertical-bars ml-1"></i>
+                                </span>
+                            </li>
+                            <li>Full Stack Developer - Chapter 2: Creating User Interface With HTML
+                                <span class="action-icons">
+                                    <i class="fas fa-check-circle text-success"></i>
+                                    <i class="fas fa-ellipsis-h vertical-bars ml-1"></i>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Fourth Column: Additional Information -->
+    <div class="course-status">
+        <h3>Course Status</h3>
+        <div class="status-icons">
+            <button type="button"><i class="fas fa-compress-alt"></i> Unpublished</button>
+            <button type="button"><i class="fas fa-chart-line"></i> Published</button>
+        </div>
+
+        <div class="options"></div>   
+            <ul>
+                <li><a href="#" target="_blank">Import Existing Content</a></li>
+                <li><a href="#" target="_blank">Import From Commons</a></li>
+                <li><a href="#" target="_blank">Choose Home Page</a></li>
+                <li><a href="#" target="_blank">View Course Stream</a></li>
+                <li><a href="#" target="_blank">New Announcement</a></li>
+                <li><a href="#" target="_blank">New Analytics</a></li>
+                <li><a href="#" target="_blank">View Course Notification</a></li>
+            </ul>
+
+            <h3>Coming Up</h3>
+            <p><a href="#">View Calendar</a></p>
+            <ul>
+                <li><a href="#" target="_blank">Lecture CS4550.12631.202410 Sep 7 at 11:45am</a></li>
+                <li><a href="#" target="_blank">CS4550.12631.202410 Sep 11 at 11:45am</a></li>
+                <li><a href="#" target="_blank">CS5610 06 SP23 Lecture Sep 11 at 6pm</a></li>
+            </ul>
+        </div>     
+    </div>
+
+    <script> 
+    </script>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Latest compiled and minified jQuery from jQuery's official CDN -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</div>
+
+</body>
+</html>

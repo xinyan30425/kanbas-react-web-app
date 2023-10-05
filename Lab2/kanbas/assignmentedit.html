@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+body {
+    font-family: "Times", serif;
+}
+.container {
+    display: flex;
+}
+.sidebar {
+    width: 15%;
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.sidebar a {
+    display: block;
+    margin-bottom: 10px;
+}
+.grades {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.grades table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.grades table, .grades th, .grades td {
+    border: 1px solid #ccc;
+}
+.grades th, .grades td {
+    padding: 10px;
+    text-align: left;
+}
+.grades input[type="text"] {
+    width: 100%;
+}
+.grades select {
+    width: 100%;
+}
+.extra-info {
+    width: 20%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.options-bar {
+    display: flex;
+    align-items: center;
+}
+
+.options-bar div {
+    margin-left: auto;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.custom-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    content: ">" !important;
+    color: #6c757d !important; /* Adjust color if needed */
+    padding: 0 0.5rem !important; /* Adjust spacing if needed */
+}
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+<!-- Breadcrumb -->
+<nav aria-label="breadcrumb" class="mt-2 ml-2 custom-breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">[Course Name]</li>
+        <li class="breadcrumb-item">[Term]</li>
+        <li class="breadcrumb-item">[Section]</li>
+        <li class="breadcrumb-item">Assignments</li>
+        <li class="breadcrumb-item active" aria-current="page">A1 ENV</li>
+    </ol>
+</nav>
+
+<div class="container-fluid">
+    <form action="assignments.html" method="post" class="ml-2">
+        <div class="form-group">
+            <strong>Assignment Name</strong>
+            <input type="text" class="form-control mt-2" placeholder="A1 - ENV -HTML"> <!-- Added form-control and mt-2 classes -->
+            <input type="text" class="form-control form-control-lg mt-2" placeholder="This assignment describes how to install the development environment for creating and working with Web applicaitons we will be developing this semester."> 
+        </div>
+        
+        <div class="row mb-3">
+            <label for="points" class="col-sm-2 col-form-label">Points</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="points" placeholder="100">
+            </div>
+        </div>
+
+        <div class="options-bar">
+            <br>
+            Assignment Group
+            <button class="publish-all-button" onclick="toggleDropdown()">ASSIGNMENTS <i class="fas fa-angle-down"></i></button>
+        </div>
+    
+        <div class="options-bar">
+            <br>
+            Display Grade as
+            <button class="publish-all-button" onclick="toggleDropdown()">Percentage <i class="fas fa-angle-down"></i></button>
+        </div>
+
+        <div class="form-group">
+            <br>
+            <label for="submission-type" class="d-block mb-2">Submission Type</label>
+            <div class="border p-3">
+                <div class="row">
+                    <div class="col-12">
+                        <select id="submission-type" class="form-control mb-2" name="submission-type">
+                            <option>Online</option>
+                        </select>
+                        
+                        <label class="d-block mb-2">Online Entry Options</label>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="text-entry">
+                            <label class="form-check-label" for="text-entry">Text Entry</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="website-url">
+                            <label class="form-check-label" for="website-url">Web URL</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="media-recording">
+                            <label class="form-check-label" for="media-recording">Media Recordings</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="student-annotation">
+                            <label class="form-check-label" for="student-annotation">Student Annotation</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input type="checkbox" class="form-check-input" name="file-uploads">
+                            <label class="form-check-label" for="file-uploads">File Uploads</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="submission-attemts">Submission Attemts</label>
+            <select id="submission-attemts" name="submission-attemts">
+              <option>Unlimited</option>
+            </select>
+        </div>
+
+        
+        <div class="form-group">
+          <label for="plagiarism-review">Plagiarism Review</label>
+          <select id="plagiarism-review" name="plagiarism-review">
+            <option>None</option>
+            <option>Options</option>
+          </select>
+        </div>
+        
+
+        <div class="form-group">
+          <label>Group Assignments</label>
+          <label><input type="checkbox" name="group-assignments"> Assign an assignment to each group</label>
+        </div>
+
+        <div class="form-group">
+          <label>Peer Reviews</label>
+          <label><input type="checkbox" name="peer-reviews">Require  Peer Reviews</label>
+        </div>
+
+        Assign to
+        <div><input type="text" placeholder="Everyone"></div>
+
+
+        <div class="form-group">
+            <br>
+            <label for="due-date">Due</label>
+            <input type="date" id="due-date" name="due-date">
+          </div>
+
+          <div class="form-group">
+            <label for="available-from">Available from</label>
+            <input type="date" id="available-from" name="available-from">
+          </div>
+          <div class="form-group">
+            <label for="until-date">Until</label>
+            <input type="date" id="until-date" name="until-date">
+        </div>
+      
+        <button type="submit">Save</button>
+        <a href="assignments.html">Cancel</a>
+      </form>
+
+        
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+</body>
+</html>

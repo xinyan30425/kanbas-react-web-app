@@ -1,0 +1,381 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html, body {
+    font-family: 'Arial, sans-serif';
+    height:100%;
+    width: 100%;
+}
+
+
+.content-area {
+    flex-grow: 1; 
+    display:flex;
+    /* width:100%; */
+}
+
+
+.toggle {
+    display: none;
+}
+
+
+
+#first-sidebar a:focus + .nested-sidebar,
+        #first-sidebar a:active + .nested-sidebar {
+            display: block;
+        }
+
+#account-toggle:checked + label + .nested-sidebar {
+    display: block;
+}
+
+.course-status {
+    width: 20%; 
+    padding: 10px;
+    display:block;
+}
+
+
+.status-icons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+
+.sidebar a i.large-icon {
+    font-size: 25px;  /* Adjust this size as needed */
+}
+
+.sidebar a i.account-icon {
+    font-size: 25px;  /* Adjust this size as needed */
+    color: gray;
+}
+
+
+.status-icons span {
+    cursor: pointer;
+}
+
+.options h3, .coming-up h3 {
+    margin: 0 0 10px 0;
+}
+
+.options ul, .coming-up ul {
+    list-style-type: disc;
+    margin: 0;
+    padding: 0 0 0 20px;
+}
+
+.options ul li, .coming-up ul li {
+    margin-bottom: 5px;
+}
+
+
+.container {
+    margin-left:0;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.main-content {
+    padding: 20px;
+    position: relative;
+    flex:3;
+}
+
+
+.additional-info {
+    width: 25%;
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+
+/* Styles for Sidebar */
+.sidebar {
+    background-color: black;
+    min-width: 75px; /* Adjust as necessary */
+    max-width:85px;
+    /* width: max-content;  */ /* This will ensure the sidebar takes up only as much width as its content */
+    height:100vh;/* This ensures the height is always equal to the height of the browser window */
+    padding-left:6; /* Reset any default padding to 0 */
+    padding-right: 6;
+    flex-shrink: 0;
+
+}
+
+.sidebar a:not(.selected):hover, .nested-sidebar a:not(.selected):hover {
+    background-color: #f5f5f5;
+    text-decoration: underline;
+}
+
+.sidebar a.selected:hover, .nested-sidebar a.selected:hover {
+    background-color: white;  /* Ensures the selected link retains its white background */
+    text-decoration: underline;
+}
+
+.selected {
+    color: red !important; /* ensures the color applies, overriding other styles */
+    background-color: white;
+}
+
+
+.sidebar a {
+    color: white; /* this makes the link use the inherited color and not the default blue */
+    text-decoration: none; /* removes the underline */
+    padding: 10px 15px; /* some padding for better appearance */
+    display: flex; 
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.sidebar a:hover{
+    background-color: #f5f5f5; /* subtle gray background for hover effect */
+}
+
+.sidebar a:hover, .sidebar a:focus {
+    text-decoration: underline; /* This is optional, but provides feedback that it's a clickable link. */
+}
+
+
+.nested-sidebar {
+    width: 195px; /* Adjust as needed */
+    background-color: white;
+    color: red; /* This will make text color white */
+    flex-shrink: 0;
+    margin-left:20px;/* Space between the main sidebar and the nested sidebar */
+    margin-right:5px;/* Ensuring total space (margin-left + margin-right) is between 20 and 25 pixels */
+}
+
+/* Style for the selected item in nested-sidebar */
+.nested-sidebar-selected {
+    color: black !important; /* ensures the color applies, overriding other styles */
+    background-color: white;
+    border-left:3px solid black;
+    padding-left:9px; /* Space between the left black border and the link's text; value between 8px and 10px */
+}
+
+
+/* General styles for links under the nested sidebar */
+.nested-sidebar a {
+    display: block;
+    text-decoration: none; /* Links must not be underlined */
+    color: red; /* Non-selected links must have red text */
+    padding-left: 20px; /* Space between the left black border and the link's text */
+    padding-right:20px;
+    margin-bottom: 17px; /* Space between the links must be between 15 and 20 pixels */
+    word-wrap: break-word; /* Links with long text that do not fit in the width of the sidebar must wrap */
+}
+
+
+.sidebar a, .main-content a, .additional-info a {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    text-align:center;
+}
+
+
+/* Style for Icons */
+.sidebar i {
+    display:block;
+    color: red; 
+    font-size: 14px;
+    margin-bottom: 6px;  /* Space between the icon and the text */
+}
+
+
+.options-bar {
+    padding: 10px;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom:10px;
+}
+
+
+.module-button {
+    color: red;
+    border-color: red;  /* If you want to change the border color as well */
+}
+
+.module-button:hover {
+    background-color: red;  /* Adjusts the background color of the button on hover */
+    color: white;           /* Adjusts the text color on hover */
+}
+
+.publish-all-button {
+    background-color: #f4f4f4;  /* Light gray background */
+    color: black;               /* Black text */
+    border: 1px solid #ccc;    /* Gray border */
+}
+
+.publish-all-button:hover {
+    background-color: #e0e0e0;  /* Darker gray background on hover */
+}
+
+ul li a {
+    color: red;         /* Set the link color to red */
+    text-decoration: none; /* Remove the underline */
+}
+
+ul li a:hover {
+    text-decoration: underline; /* Add underline on hover for better user experience */
+}
+
+.action-icons {
+    float: right;
+}
+
+.action-icons .fa-check-circle {
+    color: gray; /* Default color when not checked */
+    cursor: pointer;
+}
+
+.action-icons .fa-bars {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.header {
+    font-size: 0.5rem;
+}
+
+.header-icons {
+    float: right;
+}
+
+.header-icons i {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.header-icons .fa-check-circle {
+    color: gray;  /* Default color when not checked */
+}
+
+
+.account-icon {
+    font-size: 5rem;
+}
+
+.profile {
+    width: 100%; /* Adjust as needed */
+    padding: 10px;
+}
+
+
+.info-text {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.info-text a {
+    color: red;
+    display: inline;     /* Ensure links are inline elements */
+    text-align: left;    /* Align text to the left */
+    vertical-align: middle; /* Center vertically if needed */
+}
+
+.links-section {
+    display: block;
+    flex-direction: column;
+}
+
+.button-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.settings-link {
+    color: red;
+}
+
+
+.green-border-left {
+    border-left: 4px solid green;
+    padding-left: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+
+/* Default styles (for larger screens) */
+.course-status {
+    display: block;
+}
+
+.nested-sidebar,
+.sidebar,
+.hide-on-mobile {
+    display: block;
+}
+
+/* Large screens */
+@media (max-width: 1200px) {
+    .course-status {
+        display: none;
+    }
+}
+
+/* Medium screens */
+@media (max-width: 800px) {
+    .nested-sidebar,
+    .sidebar {
+        display: none;
+    }
+    .hide-on-mobile {
+        display: block;  /* Ensures that content is visible */
+    }
+}
+
+/* Small screens */
+@media (max-width: 500px) {
+    .nested-sidebar,
+    .hide-on-mobile {
+        display: none;
+    }
+    .sidebar {
+        display: block;  /* Ensures that sidebar is visible */
+    }
+}
+
+/* Very small screens */
+@media (max-width: 160px) {
+    .nested-sidebar {
+        display: block;  /* Ensures that nested sidebar is visible */
+    }
+    .sidebar,
+    .hide-on-mobile {
+        display: none;
+    }
+}
+
+
+
+
+
